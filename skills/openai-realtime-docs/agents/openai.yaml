@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenAI Realtime Docs"
+  short_description: "Read and apply OpenAI Realtime docs"
+  default_prompt: "Use $openai-realtime-docs to design and implement a low-latency OpenAI Realtime voice experience."

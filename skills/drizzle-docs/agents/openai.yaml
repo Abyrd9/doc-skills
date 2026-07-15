@@ -1,0 +1,4 @@
+interface:
+  display_name: "Drizzle Docs"
+  short_description: "Use official Drizzle ORM docs"
+  default_prompt: "Use $drizzle-docs to design and implement a Drizzle ORM schema, migration, or query workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Capacitor Docs"
+  short_description: "Use current Capacitor docs accurately"
+  default_prompt: "Use $capacitor-docs to plan a Capacitor setup from the official docs."
