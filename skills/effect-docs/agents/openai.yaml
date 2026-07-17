@@ -1,0 +1,4 @@
+interface:
+  display_name: "Effect Docs"
+  short_description: "Use current official Effect documentation"
+  default_prompt: "Use $effect-docs to research the official Effect documentation for this task and apply it to the installed Effect packages and project conventions."
