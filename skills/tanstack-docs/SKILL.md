@@ -1,19 +1,19 @@
 ---
 name: tanstack-docs
-description: TanStack docs lookup for any TanStack library, ecosystem add-on, or app scaffolding work. Use direct TanStack CLI JSON commands before giving framework-generic guidance; do not configure the removed `@tanstack/cli mcp` server.
+description: TanStack guidance for any TanStack library, ecosystem add-on, or app scaffolding work. Load first-party skills shipped with the installed package through TanStack Intent first, then use TanStack CLI JSON docs search for gaps; do not configure the removed `@tanstack/cli mcp` server.
 ---
 
 # TanStack Docs
 
-Use direct TanStack CLI commands with JSON output as the default source for TanStack work.
+Use first-party skills shipped with the installed package as the default source for TanStack work. Use TanStack CLI docs search for exact APIs or packages that do not ship a matching skill.
 
 ## Workflow
 
-1. Detect the TanStack surface area. If the library or add-on is unclear, run `bunx @tanstack/cli libraries --json` first.
-2. Choose the matching CLI JSON command from the table below.
-3. Run the command before proposing TanStack-specific guidance when network and sandbox permissions allow it.
+1. Inspect installed `@tanstack/*` packages and run `bunx @tanstack/intent@latest list --json`.
+2. If the installed package ships a matching skill and project policy permits it, load it with `bunx @tanstack/intent@latest load <package>#<skill>` before proposing code.
+3. If no matching package skill exists or an exact API claim remains, choose the matching TanStack CLI JSON command below.
 4. Provide TanStack-native patterns and commands first.
-5. Completion: guidance is grounded in CLI JSON output, or the answer states why the CLI could not be run and keeps any recommendation provisional.
+5. Completion: guidance is grounded in the installed package skill and any needed CLI JSON output, or the answer states why neither could be loaded and keeps the recommendation provisional.
 
 ## Detect TanStack context
 
@@ -23,7 +23,11 @@ Treat these as triggers:
 - The task asks for route/data-loading/state-table patterns that likely map to TanStack libraries.
 - The task asks for scaffolding or add-ons in TanStack projects.
 
-## CLI-first behavior
+## Intent and CLI behavior
+
+- Intent scans static skill files without importing package code. Respect `package.json#intent.skills` and `intent.exclude`; do not widen the allowlist without the user's approval.
+- Prefer package-local skills because they version with the installed library.
+- Use `bunx @tanstack/intent@latest list --json` for discovery and `bunx @tanstack/intent@latest load <package>#<skill>` for the selected skill.
 
 - Do not add or rely on MCP client config that runs `@tanstack/cli mcp`; the TanStack CLI MCP server has been removed.
 - Use `bunx @tanstack/cli ... --json` commands to list libraries, search docs, fetch docs pages, inspect add-ons, and query ecosystem metadata.

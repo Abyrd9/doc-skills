@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bun Docs"
+  short_description: "Help with Bun Docs tasks and workflows"
+  default_prompt: "Use $bun-docs to help with this task."

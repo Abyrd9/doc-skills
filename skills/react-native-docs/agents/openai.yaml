@@ -1,0 +1,4 @@
+interface:
+  display_name: "React Native Docs"
+  short_description: "Use current official React Native documentation"
+  default_prompt: "Use $react-native-docs to answer this React Native question from the official version-matched docs."

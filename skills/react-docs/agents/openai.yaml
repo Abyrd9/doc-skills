@@ -1,0 +1,4 @@
+interface:
+  display_name: "React Docs"
+  short_description: "Help with React Docs tasks"
+  default_prompt: "Use $react-docs to help with this task."

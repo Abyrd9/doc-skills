@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lexical Docs"
+  short_description: "Help with Lexical Docs tasks"
+  default_prompt: "Use $lexical-docs to help with this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Langgraph Js Docs"
+  short_description: "Help with Langgraph Js Docs tasks"
+  default_prompt: "Use $langgraph-js-docs to help with this task."

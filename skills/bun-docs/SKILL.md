@@ -1,6 +1,6 @@
 ---
 name: bun-docs
-description: Bun docs lookup for Bun runtime, package manager, test, and API work. Use Bun's official sitemap plus route `.md` pages before giving Bun-specific guidance; use MCP only when it is exposed and healthy.
+description: Bun docs lookup for Bun runtime, package manager, test, and API work. Use Bun's official LLM index plus route `.md` pages before giving Bun-specific guidance; use MCP only when it is exposed and healthy.
 ---
 
 # Bun Docs
@@ -10,9 +10,9 @@ Use Bun official docs as the first source of truth for Bun tasks.
 ## Workflow
 
 1. Detect the Bun surface area: runtime API, package manager, test runner, scripts, config, Node compatibility, or project setup.
-2. Fetch `https://bun.com/docs/sitemap.xml`.
+2. Fetch `https://bun.com/docs/llms.txt`.
 3. Resolve the smallest set of matching `https://bun.com/docs/...` routes.
-4. Fetch the matching `<route>.md` pages, such as `https://bun.com/docs/pm/bunx.md`; if a `.md` route fails, try one nearby route from the sitemap before falling back.
+4. Fetch the matching `<route>.md` pages, such as `https://bun.com/docs/pm/bunx.md`; if a `.md` route fails, try one nearby route from the index before falling back.
 5. Answer from those pages first; fall back to general JavaScript or Node guidance only when Bun docs do not cover the topic.
 6. Completion: the answer or code change is grounded in the fetched Bun route, or it explicitly says Bun docs did not cover the needed detail.
 
@@ -27,7 +27,7 @@ Treat these as triggers:
 ## MCP fallback
 
 - If a Bun docs MCP server is exposed in the current tool surface and healthy, it can be used for convenience.
-- If MCP fails, continue with sitemap + `.md` fetch and do not block the task.
+- If MCP fails, continue with the LLM index + `.md` fetch and do not block the task.
 
 ## Output rules
 

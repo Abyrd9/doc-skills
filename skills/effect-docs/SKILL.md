@@ -19,8 +19,8 @@ Completion criterion: the documentation search is scoped to the installed versio
 
 ## 2. Route through official docs
 
-1. Fetch `https://effect.website/llms.txt` as the live route map.
-2. Open the smallest set of matching pages under `https://effect.website/docs/`.
+1. If the installed `effect` package contains `node_modules/effect/AGENTS.md`, read it completely first. It is first-party guidance shipped with that exact package version.
+2. Open `https://effect.website/docs/` and the smallest set of matching official pages.
 3. Use the API reference linked from the official docs when an exact signature, overload, export, or package boundary matters.
 
 Common branches:
@@ -35,6 +35,8 @@ Common branches:
 - Unstable modules: read the module introduction and exact feature page, then preserve the instability warning in the recommendation.
 
 Completion criterion: every Effect-specific API, import, type parameter, or runtime claim is covered by a fetched official page for the relevant installed surface.
+
+For deeper pattern guidance, use [references/docs-index.md](references/docs-index.md) to select one bundled guide. Treat these guides as secondary to installed package types and current official docs.
 
 ## 3. Fit the docs to the codebase
 
@@ -56,7 +58,7 @@ Report the official pages used, installed Effect versions that shaped the answer
 
 ## Source fallback order
 
-1. `https://effect.website/llms.txt` and the matching official guide pages.
+1. The installed package's `AGENTS.md`, when present, and the matching official guide pages.
 2. The API references linked from `https://effect.website/docs/additional-resources/api-reference/`.
 3. Installed package types or source for the pinned version.
 4. Official Effect repository material or release notes for remaining version-specific gaps.

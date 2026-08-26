@@ -1,0 +1,4 @@
+interface:
+  display_name: "Expo Docs"
+  short_description: "Use current version-matched Expo documentation"
+  default_prompt: "Use $expo-docs to answer this Expo question from the official SDK-matched documentation."

@@ -7,6 +7,17 @@ description: Capacitor official docs workflow for building, migrating, configuri
 
 Use current official Capacitor docs as the source of truth. Capacitor changes across major versions, so do not answer from memory when commands, platform support, config keys, plugins, or native project behavior matter.
 
+## First-party task skills
+
+Before the docs workflow, check [Ionic's Capacitor skills](https://github.com/ionic-team/capacitor-skills) for these exact tasks:
+
+- creating a Capacitor plugin;
+- migrating a Cordova plugin;
+- generating OutSystems Developer Cloud build actions; or
+- migrating a Capacitor 8.4 app to the 8.5 UIScene lifecycle.
+
+Use the matching first-party skill for its workflow, then verify changing APIs and commands against the version-matched docs below. The pack does not replace this general docs workflow outside those four tasks.
+
 ## Workflow
 
 1. Version gate the task.

@@ -37,6 +37,8 @@ Use official React docs as the default source of truth before making React code 
 - New or redesigned UI: read `Thinking in React`, `Passing Props to a Component`, `Rendering Lists`, and `Conditional Rendering` as needed.
 - State modeling: read `Choosing the State Structure`, `Sharing State Between Components`, and `Preserving and Resetting State`.
 - Effects or dependencies: read `You Might Not Need an Effect`, `Synchronizing with Effects`, and `Removing Effect Dependencies`.
+- Effect refactors: use [references/effect-decision-guide.md](references/effect-decision-guide.md) for concrete replacement patterns.
+- `useCallback` decisions: use [references/use-callback-guide.md](references/use-callback-guide.md) after checking React Compiler and whether stable identity is part of a real optimization or dependency boundary.
 - Custom Hooks: read `Reusing Logic with Custom Hooks` and the specific Hook API reference.
 - Forms and DOM elements: read the relevant `react-dom/components/*` reference page.
 - Performance or memoization: read `React Compiler`, `useMemo`, `useCallback`, `memo`, `useDeferredValue`, `useTransition`, or `startTransition` as appropriate.

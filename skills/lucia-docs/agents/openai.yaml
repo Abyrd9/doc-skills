@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lucia Docs"
+  short_description: "Help with Lucia Docs tasks"
+  default_prompt: "Use $lucia-docs to help with this task."

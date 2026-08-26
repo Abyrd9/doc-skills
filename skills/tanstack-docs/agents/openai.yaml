@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tanstack Docs"
+  short_description: "Help with Tanstack Docs tasks"
+  default_prompt: "Use $tanstack-docs to help with this task."

@@ -1,9 +1,15 @@
 ---
 name: langgraph-js-docs
-description: LangChain and LangGraph JS/TS docs lookup for LangChain.js, LangGraph.js, and LangSmith SDK questions. Use the docs sitemap search and TypeDoc API reference before answering SDK questions or changing code.
+description: LangChain and LangGraph JS/TS docs lookup for exact APIs, version gaps, and topics not covered by LangChain's first-party task skills. Use the matching official LangChain skill first, then the docs sitemap and TypeDoc reference for exact SDK claims.
 ---
 
 # LangChain + LangGraph JS/TS Docs Search
+
+## First-party skills first
+
+Start with the matching skill in [LangChain's official skill pack](https://github.com/langchain-ai/langchain-skills). Use its README as the live route map for LangChain, LangGraph, Deep Agents, dependency, quickstart, and CLI tasks. For LangSmith trace, dataset, and evaluator work, use the separate [official LangSmith skills](https://github.com/langchain-ai/langsmith-skills).
+
+Use this docs workflow for exact JS/TS symbols, installed-version mismatches, or topics the matching first-party skill does not cover. Current docs and installed package types remain the API source of truth.
 
 ## Canonical doc roots (prefer these)
 
