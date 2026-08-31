@@ -7,6 +7,15 @@ description: Effect official-docs workflow for TypeScript code using Effect, Sch
 
 Use current official Effect documentation and the project's installed package surface as the sources of truth.
 
+## First-party task skills
+
+Use Effect's official skills for these exact tasks before this general docs workflow:
+
+- Repository setup or adding Effect: [`effect-ts`](https://github.com/Effect-TS/skills/tree/main/skills/effect-ts).
+- Effect v3 to v4 migration: [`effect-v3-to-v4`](https://github.com/Effect-TS/skills/tree/main/skills/effect-v3-to-v4).
+
+After the matching task workflow, use the installed package and the docs workflow below to verify exact APIs and versions. These task skills do not replace this general workflow outside setup and v3-to-v4 migration.
+
 ## 1. Establish local context
 
 1. Inspect `package.json` and the lockfile for `effect` and `@effect/*` packages, including exact versions and prerelease tags.
