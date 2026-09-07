@@ -13,7 +13,7 @@ Use this docs workflow for exact JS/TS symbols, installed-version mismatches, or
 
 ## Canonical doc roots (prefer these)
 
-- LangChain OSS JS/TS docs: `https://docs.langchain.com/oss/javascript/langchain/`
+- LangChain OSS JS/TS docs: `https://docs.langchain.com/oss/javascript/langchain/overview`
 - LangGraph OSS JS/TS docs: `https://docs.langchain.com/oss/javascript/langgraph/`
 - JS/TS integrations: `https://docs.langchain.com/oss/javascript/integrations/`
 - JS/TS reference hub: `https://docs.langchain.com/oss/javascript/reference/overview`

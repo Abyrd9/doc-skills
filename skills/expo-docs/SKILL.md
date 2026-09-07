@@ -7,6 +7,15 @@ description: Expo docs workflow for current, SDK-matched official guidance. Use 
 
 Use the installed Expo surface and current official documentation as the sources of truth. Expo APIs, SDK compatibility, Router behavior, and EAS commands change often; do not answer them from memory.
 
+## First-party task skills
+
+Load Expo's official [`expo-overview`](https://github.com/expo/skills/tree/main/plugins/expo/skills/expo-overview) skill first for Expo or EAS work; it routes to the matching first-party task skill. In particular:
+
+- Use [`eas-update`](https://github.com/expo/skills/tree/main/plugins/expo/skills/eas-update) for EAS Update setup, publishing, runtime compatibility, testing, and debugging.
+- Use [`eas-update-insights`](https://github.com/expo/skills/tree/main/plugins/expo/skills/eas-update-insights) for update adoption, crash rates, rollout health, and payload metrics.
+
+Use the SDK-matched docs workflow below to verify exact APIs and versions. The task skills do not replace it as the source of truth.
+
 ## 1. Establish the project context
 
 1. Inspect `package.json` and the lockfile for `expo`, `react-native`, `react`, `expo-router`, Expo SDK libraries, `expo-dev-client`, and EAS tooling.

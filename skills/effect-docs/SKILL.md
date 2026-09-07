@@ -29,8 +29,8 @@ Completion criterion: the documentation search is scoped to the installed versio
 ## 2. Route through official docs
 
 1. If the installed `effect` package contains `node_modules/effect/AGENTS.md`, read it completely first. It is first-party guidance shipped with that exact package version.
-2. Open `https://effect.website/docs/` and the smallest set of matching official pages.
-3. Use the API reference linked from the official docs when an exact signature, overload, export, or package boundary matters.
+2. Route by the installed major: use `https://effect.website/docs/v3/` for Effect v3 or `https://effect.website/docs/v4/` for Effect v4. Do not let the unversioned docs redirect choose the version.
+3. Use the matching API reference (`https://effect.website/docs/v3/api` or `https://effect.website/docs/v4/api`) when an exact signature, overload, export, or package boundary matters.
 
 Common branches:
 
@@ -68,7 +68,7 @@ Report the official pages used, installed Effect versions that shaped the answer
 ## Source fallback order
 
 1. The installed package's `AGENTS.md`, when present, and the matching official guide pages.
-2. The API references linked from `https://effect.website/docs/additional-resources/api-reference/`.
+2. The matching v3 or v4 API reference linked above.
 3. Installed package types or source for the pinned version.
 4. Official Effect repository material or release notes for remaining version-specific gaps.
 
