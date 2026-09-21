@@ -28,7 +28,6 @@ npx skills add Abyrd9/doc-skills --skill react-docs
 
 - **`drizzle-docs`** — Covers Drizzle ORM schemas, queries, migrations, dialects, relations, and transactions.
 - **`effect-docs`** — Uses installed Effect package guidance and current official docs for exact APIs and versions.
-- **`langgraph-js-docs`** — Searches current LangChain.js, LangGraph.js, LangSmith SDK, and TypeDoc references.
 - **`lexical-docs`** — Covers Lexical editors, React bindings, commands, nodes, transforms, selection, and serialization.
 - **`lucia-docs`** — Uses Lucia's current session guide and Auth Book, with official archives for old Lucia versions.
 - **`react-docs`** — Looks up current React guidance for components, Hooks, state, Effects, Suspense, Server Components, and the React Compiler.
@@ -39,3 +38,4 @@ npx skills add Abyrd9/doc-skills --skill react-docs
 - OpenAI Realtime work is covered by Codex's bundled `openai-docs` skill.
 - Effect setup and v3-to-v4 migrations use [Effect's official skills](https://github.com/Effect-TS/skills); general API work remains in `effect-docs`.
 - XState work should use [Stately's official `xstate-v5` skill](https://github.com/statelyai/skills/tree/main/skills/xstate-v5).
+- LangChain and LangGraph work should use [LangChain's official skills and live documentation plugins](https://github.com/langchain-ai/langchain-plugins).

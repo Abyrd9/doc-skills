@@ -56,8 +56,10 @@ Secondary source (only if docs are thin): consult official examples in `facebook
 - `https://lexical.dev/docs/concepts/nodes`
 - `https://lexical.dev/docs/serialization/`
 - `https://lexical.dev/docs/extensions/intro`
+- `https://lexical.dev/docs/extensions/react`
 - `https://lexical.dev/docs/react/`
 - `https://lexical.dev/docs/packages/lexical-react`
+- `https://lexical.dev/docs/faq`
 - `https://lexical.dev/docs/api/` (then modules, especially `https://lexical.dev/docs/api/modules/lexical`)
 
 If you need exhaustive API surface area, enumerate modules from the sitemap under:
@@ -77,6 +79,12 @@ If you need exhaustive API surface area, enumerate modules from the sitemap unde
 ## Version-sensitive APIs
 
 When imports, serialization, or transform behavior appear version-sensitive, verify the current API module page before recommending code and call out the version boundary only if the official docs or release notes establish it.
+
+For Lexical 0.51 and later:
+
+- Prefer `LexicalExtensionComposer` for new React work; `LexicalComposer` is deprecated. Use the React extensions guide for migration.
+- Treat npm packages as ESM-only. Check the FAQ before advising CommonJS, Node.js, or Metro consumers.
+- Verify Prism helpers come from `@lexical/code-prism`; `@lexical/code` no longer re-exports them.
 
 ## Output rules
 

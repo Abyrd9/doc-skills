@@ -13,6 +13,7 @@ Load Expo's official [`expo-overview`](https://github.com/expo/skills/tree/main/
 
 - Use [`eas-update`](https://github.com/expo/skills/tree/main/plugins/expo/skills/eas-update) for EAS Update setup, publishing, runtime compatibility, testing, and debugging.
 - Use [`eas-update-insights`](https://github.com/expo/skills/tree/main/plugins/expo/skills/eas-update-insights) for update adoption, crash rates, rollout health, and payload metrics.
+- Use [`expo-migrate-module`](https://github.com/expo/skills/tree/main/plugins/expo-experiments/skills/expo-migrate-module) for Apple/Swift Expo Modules API 1.0-to-2.0 macro migrations.
 
 Use the SDK-matched docs workflow below to verify exact APIs and versions. The task skills do not replace it as the source of truth.
 
@@ -34,7 +35,7 @@ Start with:
 
 Use the index to find the smallest set of pages for the task. Fetch a page's Markdown by appending `.md` or `/index.md` to its documentation URL.
 
-For SDK APIs, use the exact versioned SDK bundle listed on the AI documentation page. Do not invent a bundle URL for an SDK that the page does not list. For EAS, use [the EAS documentation bundle](https://docs.expo.dev/llms-eas.txt) and the exact product pages involved.
+Use the index to discover exact current and EAS pages. For SDK APIs, open the verified `/versions/v<major>.0.0/...` page for the installed SDK rather than the latest page, append `.md` or `/index.md`, and confirm the route resolves.
 
 Route by owner:
 
