@@ -86,6 +86,12 @@ For Lexical 0.51 and later:
 - Treat npm packages as ESM-only. Check the FAQ before advising CommonJS, Node.js, or Metro consumers.
 - Verify Prism helpers come from `@lexical/code-prism`; `@lexical/code` no longer re-exports them.
 
+For Lexical 0.52 and later:
+
+- `SELECTION_CHANGE_COMMAND` runs before DOM reconciliation inside the pending update. Use `$getPreviousSelection()` for the last committed selection, and move DOM-dependent work to `$onUpdate(() => editor.read('latest', ...))`.
+- Default HTML export honors `DOMRenderExtension` `$createDOM` overrides. Review nodes whose overrides should affect only the live editor.
+- `LexicalNode.getCommonAncestor` is removed. Use `$getCommonAncestor(a, b)?.commonAncestor ?? null`, accounting for its different handling of non-element nodes.
+
 ## Output rules
 
 - Prefer Lexical docs over general DOM/contenteditable advice; use secondary sources only when docs don’t cover it.

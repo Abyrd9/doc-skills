@@ -14,6 +14,8 @@ Use Effect's official skills for these exact tasks before this general docs work
 - Repository setup or adding Effect: [`effect-ts`](https://github.com/Effect-TS/skills/tree/main/skills/effect-ts).
 - Effect v3 to v4 migration: [`effect-v3-to-v4`](https://github.com/Effect-TS/skills/tree/main/skills/effect-v3-to-v4).
 
+For stable v4, prefer `effect@4` over stale `@rc` examples, and use the import paths shipped in the installed package. Stable v4 paths omit the beta `unstable` segment. Runtime ecosystem packages align on the same v4 version; `@effect/language-service` keeps its own release line.
+
 After the matching task workflow, use the installed package and the docs workflow below to verify exact APIs and versions. These task skills do not replace this general workflow outside setup and v3-to-v4 migration.
 
 ## 1. Establish local context
