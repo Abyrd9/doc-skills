@@ -9,7 +9,7 @@ Use official React Native docs and the project's installed package surface as th
 
 ## First-party task skills
 
-For a React Native version upgrade, use the React Native Community's official [`upgrade-react-native`](https://github.com/react-native-community/skills/tree/main/upgrade-react-native) skill before the docs workflow. For React Native 0.80+ Strict TypeScript API migration, use its official [`migrate-to-strict-api`](https://github.com/react-native-community/skills/tree/main/migrate-to-strict-api) skill. Then verify the result against the exact installed and target versions below.
+For a React Native Community CLI project version upgrade, use the React Native Community's official [`upgrade-react-native`](https://github.com/react-native-community/skills/tree/main/upgrade-react-native) skill before the docs workflow. For an Expo project upgrade, use Expo's official [`expo-upgrade`](https://github.com/expo/skills/tree/main/plugins/expo/skills/expo-upgrade) skill through `expo-docs`. For React Native 0.80+ Strict TypeScript API migration, use the Community's official [`migrate-to-strict-api`](https://github.com/react-native-community/skills/tree/main/migrate-to-strict-api) skill. Then verify the result against the exact installed and target versions below.
 
 ## 1. Establish the local React Native context
 

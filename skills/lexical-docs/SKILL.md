@@ -78,6 +78,8 @@ If you need exhaustive API surface area, enumerate modules from the sitemap unde
 
 ## Version-sensitive APIs
 
+Inspect the installed `lexical` and `@lexical/*` versions first. If live docs describe a change that the matching release notes do not include, treat it as unreleased.
+
 When imports, serialization, or transform behavior appear version-sensitive, verify the current API module page before recommending code and call out the version boundary only if the official docs or release notes establish it.
 
 For Lexical 0.51 and later:

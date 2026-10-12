@@ -14,7 +14,7 @@ Use Effect's official skills for these exact tasks before this general docs work
 - Repository setup or adding Effect: [`effect-ts`](https://github.com/Effect-TS/skills/tree/main/skills/effect-ts).
 - Effect v3 to v4 migration: [`effect-v3-to-v4`](https://github.com/Effect-TS/skills/tree/main/skills/effect-v3-to-v4).
 
-For stable v4, prefer `effect@4` over stale `@rc` examples, and use the import paths shipped in the installed package. Stable v4 paths omit the beta `unstable` segment. Runtime ecosystem packages align on the same v4 version; `@effect/language-service` keeps its own release line.
+For stable v4, prefer `effect@4` over stale `@rc` examples, and use the import paths shipped in the installed package. Stable v4 paths omit the beta `unstable` segment, but paths do not declare API stability: `@stability unstable` APIs may change in minor releases, while `@stability experimental` APIs may change in patch releases. Runtime ecosystem packages align on the same v4 version; `@effect/language-service` keeps its own release line.
 
 After the matching task workflow, use the installed package and the docs workflow below to verify exact APIs and versions. These task skills do not replace this general workflow outside setup and v3-to-v4 migration.
 
@@ -47,7 +47,7 @@ Common branches:
 
 Completion criterion: every Effect-specific API, import, type parameter, or runtime claim is covered by a fetched official page for the relevant installed surface.
 
-For deeper pattern guidance, use [references/docs-index.md](references/docs-index.md) to select one bundled guide. Treat these guides as secondary to installed package types and current official docs.
+For Effect v3 pattern guidance, use [references/docs-index.md](references/docs-index.md) to select one bundled guide. The bundled guides target v3; for v4, use the installed package guidance and current v4 docs instead.
 
 ## 3. Fit the docs to the codebase
 

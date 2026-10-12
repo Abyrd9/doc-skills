@@ -78,6 +78,7 @@ For official plugins, match plugin install tags to the Capacitor core major. The
 - Cordova migration strategy: `/cordova/migrating-strategy`
 - Cordova to Capacitor migration: `/cordova/migrating-from-cordova-to-capacitor`
 - Major upgrade guide: `/updating/<major>-0`, for example `/updating/8-0`
+- Capacitor 8.4 to 8.5 UIScene migration: `/updating/8-5`
 - Official plugin upgrade guide: `/updating/plugins/<major>-0`, for example `/updating/plugins/8-0`
 
 When upgrading, read both the core major upgrade guide and the plugin upgrade guide, then verify `@capacitor/core`, `@capacitor/ios`, `@capacitor/android`, and official plugins are on compatible majors.

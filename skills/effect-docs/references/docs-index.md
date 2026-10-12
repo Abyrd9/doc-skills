@@ -1,13 +1,12 @@
-# Docs Index (official docs -> local references)
+# Effect v3 Docs Index
 
-Use this guide when you need to quickly route an Effect task from official docs topics to the most relevant local skill reference.
+Use this guide only for an Effect v3 project. These bundled references contain v3 APIs. For v4, use the installed package guidance and current v4 docs instead.
 
 ## Canonical sources
 
 - `node_modules/effect/AGENTS.md` (first-party, installed-version guidance when present)
-- `https://effect.website/docs` (full docs)
-- `https://effect.website/docs/additional-resources/api-reference` (API reference)
-- `https://tim-smart.github.io/effect-io-ai/` (concise API list)
+- `https://effect.website/docs/v3/` (full v3 docs)
+- `https://effect.website/docs/v3/api` (v3 API reference)
 
 ## Topic mapping
 

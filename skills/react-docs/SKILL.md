@@ -24,9 +24,9 @@ Use official React docs as the default source of truth before making React code 
 ## Workflow
 
 1. Detect the React surface area before editing: components, Hooks, Effects, forms, lists, context, reducers, refs, Suspense, Server Components, React DOM, or compiler behavior.
-2. Fetch `https://react.dev/llms.txt` and choose the smallest set of official pages relevant to the task.
-3. Read the relevant official pages before proposing or applying React-specific changes.
-4. Inspect the local codebase for its React version, framework conventions, compiler setup, lint rules, and existing component patterns.
+2. Inspect the local codebase for its `react`, `react-dom`, type-package, framework, and compiler versions, plus its lint rules and existing component patterns.
+3. Fetch `https://react.dev/llms.txt` and choose the smallest set of official pages relevant to the task. If an indexed `.md` route fails, open the same route without `.md` before treating it as missing.
+4. Read the relevant official pages before proposing or applying React-specific changes.
 5. Prefer the simplest React-native design that follows the docs and the local codebase style.
 6. Make the smallest correct change, then run the repo's normal lint/test/build checks.
 7. In the final response, mention the React docs pages that influenced the decision when the change is non-trivial.

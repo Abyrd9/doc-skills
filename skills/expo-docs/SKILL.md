@@ -28,7 +28,7 @@ Completion criterion: the docs search is scoped to the installed Expo SDK, proje
 
 ## 2. Route through official Markdown docs
 
-Start with:
+When an Expo documentation tool is exposed in the current executor, use it to search and read the version-matched official docs first. Otherwise, start with:
 
 - [Expo documentation for AI agents](https://docs.expo.dev/llms/)
 - [Expo docs index](https://docs.expo.dev/llms.txt)
