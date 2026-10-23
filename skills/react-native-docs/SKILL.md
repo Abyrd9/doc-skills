@@ -1,6 +1,6 @@
 ---
 name: react-native-docs
-description: React Native docs workflow for version-matched core components, APIs, styles, accessibility, testing, performance, platform behavior, native integration, New Architecture, Turbo Native Modules, Fabric, Codegen, Hermes, and React Native upgrades. Use expo-docs instead for Expo SDK libraries, Router, CLI, app config, prebuild, Expo Modules, or EAS.
+description: React Native docs workflow for version-matched core components, APIs, styles, accessibility, testing, performance, platform behavior, native integration, New Architecture, Turbo Native Modules, Fabric, Codegen, Hermes, and React Native upgrades. Use Expo's official expo-overview router instead for Expo SDK libraries, Router, CLI, app config, prebuild, Expo Modules, or EAS.
 ---
 
 # React Native Docs
@@ -9,7 +9,7 @@ Use official React Native docs and the project's installed package surface as th
 
 ## First-party task skills
 
-For a React Native Community CLI project version upgrade, use the React Native Community's official [`upgrade-react-native`](https://github.com/react-native-community/skills/tree/main/upgrade-react-native) skill before the docs workflow. For an Expo project upgrade, use Expo's official [`expo-upgrade`](https://github.com/expo/skills/tree/main/plugins/expo/skills/expo-upgrade) skill through `expo-docs`. For React Native 0.80+ Strict TypeScript API migration, use the Community's official [`migrate-to-strict-api`](https://github.com/react-native-community/skills/tree/main/migrate-to-strict-api) skill. Then verify the result against the exact installed and target versions below.
+For a React Native Community CLI project version upgrade, use the React Native Community's official [`upgrade-react-native`](https://github.com/react-native-community/skills/tree/main/upgrade-react-native) skill before the docs workflow. For an Expo project upgrade, use Expo's official [`expo-upgrade`](https://github.com/expo/skills/tree/main/plugins/expo/skills/expo-upgrade) skill through its `expo-overview` router. For React Native 0.80+ Strict TypeScript API migration, use the Community's official [`migrate-to-strict-api`](https://github.com/react-native-community/skills/tree/main/migrate-to-strict-api) skill. Then verify the result against the exact installed and target versions below.
 
 ## 1. Establish the local React Native context
 
@@ -29,6 +29,8 @@ Start with:
 
 Use the versions page to select docs for the installed minor. Use unversioned `/docs/...` pages only for the current stable release or when no project version exists. Use `next` docs only when the user asks about an unreleased version.
 
+Cross-check the versions page against official React Native release posts and the installed package. If official sources disagree about the current release, follow the installed version for project work and state the mismatch.
+
 Choose the smallest page set that covers the task:
 
 - Setup and project shape: environment setup, framework guidance, getting started without a framework, or integration with existing apps.
@@ -42,7 +44,7 @@ Completion criterion: each React Native API, prop, config value, native step, or
 ## 3. Respect source ownership
 
 - Use `react-docs` when the question is about React components, Hooks, Effects, Suspense, or React Compiler behavior rather than React Native.
-- Use `expo-docs` for Expo Router, EAS, config plugins, prebuild, Expo modules, or SDK-owned APIs. Keep the React Native docs for the underlying React Native behavior.
+- Use Expo's official `expo-overview` router for Expo Router, EAS, config plugins, prebuild, Expo modules, or SDK-owned APIs. Keep the React Native docs for the underlying React Native behavior.
 - Use the owning library's docs for community packages. React Native's package directory can help discovery, but it does not replace a library's API docs.
 - Prefer New Architecture docs when the installed version and project use it. Do not suggest legacy native APIs without confirming that the project still needs them.
 - If the current official docs and installed types or source disagree, follow the pinned package surface and call out the version gap.

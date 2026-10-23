@@ -18,6 +18,8 @@ Before choosing documentation:
 
 Do not route a stable project through prerelease or v1-upgrade guidance unless the user asks to upgrade. If no project context exists, state the assumed dialect, driver, runtime, and release channel before recommending code.
 
+If the installed `drizzle-kit` package contains `skills/drizzle/SKILL.md`, read it completely first. It is first-party, version-matched guidance and may route through active `mcp__drizzle__*` tools or installed CLI JSON output. Do not install or upgrade to a prerelease solely to obtain that skill.
+
 Completion criterion: the documentation search is scoped to the project's actual Drizzle version, dialect, driver or provider, and migration workflow.
 
 ## 2. Route through the live documentation index

@@ -10,12 +10,15 @@ Use official React docs as the default source of truth before making React code 
 ## Canonical Sources
 
 - Docs index for agents: `https://react.dev/llms.txt`
+- Version archive: `https://react.dev/versions`
 - Learn landing page: `https://react.dev/learn.md`
 - Component design: `https://react.dev/learn/thinking-in-react.md`
 - State structure: `https://react.dev/learn/choosing-the-state-structure.md`
 - Effects decision guide: `https://react.dev/learn/you-might-not-need-an-effect.md`
 - Effect synchronization: `https://react.dev/learn/synchronizing-with-effects.md`
 - Effect dependencies: `https://react.dev/learn/removing-effect-dependencies.md`
+- Effect Events: `https://react.dev/learn/separating-events-from-effects.md`
+- `useEffectEvent` API: `https://react.dev/reference/react/useEffectEvent.md`
 - React Compiler: `https://react.dev/learn/react-compiler.md`
 - React API reference: `https://react.dev/reference/react.md`
 - React DOM reference: `https://react.dev/reference/react-dom.md`
@@ -24,9 +27,9 @@ Use official React docs as the default source of truth before making React code 
 ## Workflow
 
 1. Detect the React surface area before editing: components, Hooks, Effects, forms, lists, context, reducers, refs, Suspense, Server Components, React DOM, or compiler behavior.
-2. Inspect the local codebase for its `react`, `react-dom`, type-package, framework, and compiler versions, plus its lint rules and existing component patterns.
+2. Inspect the local codebase for its `react`, `react-dom`, type-package, framework, and compiler versions, plus its lint rules and existing component patterns. Use the version archive for older majors.
 3. Fetch `https://react.dev/llms.txt` and choose the smallest set of official pages relevant to the task. If an indexed `.md` route fails, open the same route without `.md` before treating it as missing.
-4. Read the relevant official pages before proposing or applying React-specific changes.
+4. Read the relevant official pages before proposing or applying React-specific changes. If live docs describe an API missing from the installed React version, verify its release notes and installed types before using it.
 5. Prefer the simplest React-native design that follows the docs and the local codebase style.
 6. Make the smallest correct change, then run the repo's normal lint/test/build checks.
 7. In the final response, mention the React docs pages that influenced the decision when the change is non-trivial.
@@ -36,7 +39,7 @@ Use official React docs as the default source of truth before making React code 
 
 - New or redesigned UI: read `Thinking in React`, `Passing Props to a Component`, `Rendering Lists`, and `Conditional Rendering` as needed.
 - State modeling: read `Choosing the State Structure`, `Sharing State Between Components`, and `Preserving and Resetting State`.
-- Effects or dependencies: read `You Might Not Need an Effect`, `Synchronizing with Effects`, and `Removing Effect Dependencies`.
+- Effects or dependencies: read `You Might Not Need an Effect`, `Synchronizing with Effects`, and `Removing Effect Dependencies`. Read `Separating Events from Effects` before using `useEffectEvent`, and confirm the installed React version provides it.
 - Effect refactors: use [references/effect-decision-guide.md](references/effect-decision-guide.md) for concrete replacement patterns.
 - `useCallback` decisions: use [references/use-callback-guide.md](references/use-callback-guide.md) after checking React Compiler and whether stable identity is part of a real optimization or dependency boundary.
 - Custom Hooks: read `Reusing Logic with Custom Hooks` and the specific Hook API reference.
@@ -51,6 +54,7 @@ Use official React docs as the default source of truth before making React code 
 - Model state as the minimal complete representation. Derive everything else during render when possible.
 - Prefer one-way data flow: pass data down, pass event handlers up, and lift state only when multiple components need the same source of truth.
 - Use Effects only to synchronize with external systems. Do not use Effects for render-time derivations or event-specific logic.
+- Use Effect Events only for non-reactive logic called from Effects. Do not pass them to other components or Hooks, or use them to hide required dependencies.
 - Prefer event handlers for logic caused by a user interaction.
 - Prefer keys, controlled components, or derived values over Effects for resetting or mirroring state.
 - Do not add `useMemo`, `useCallback`, or `memo` by default. Use them when the docs and measurements or codebase constraints justify it, especially considering React Compiler.

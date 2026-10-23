@@ -21,7 +21,6 @@ npx skills add Abyrd9/doc-skills --skill react-docs
 - **`bun-docs`** — Looks up current Bun runtime, package manager, test runner, and API documentation.
 - **`capacitor-docs`** — Covers Capacitor configuration, native projects, plugins, migrations, debugging, and releases.
 - **`electron-docs`** — Covers Electron architecture, secure IPC, packaging, signing, updates, and distribution.
-- **`expo-docs`** — Uses SDK-matched Expo documentation after routing implementation tasks through [Expo's official plugin](https://github.com/expo/skills).
 - **`react-native-docs`** — Uses version-matched React Native documentation for core APIs, styles, accessibility, testing, and upgrades.
 
 ## Library and Framework Skills
@@ -35,6 +34,7 @@ npx skills add Abyrd9/doc-skills --skill react-docs
 
 ## First-party replacements
 
+- Expo and EAS work should use [Expo's official `expo-overview` router, task skills, and documentation tools](https://github.com/expo/skills).
 - OpenAI Realtime work is covered by Codex's bundled `openai-docs` skill.
 - Effect setup and v3-to-v4 migrations use [Effect's official skills](https://github.com/Effect-TS/skills); general API work remains in `effect-docs`.
 - XState work should use [Stately's official `xstate-v5` skill](https://github.com/statelyai/skills/tree/main/skills/xstate-v5).

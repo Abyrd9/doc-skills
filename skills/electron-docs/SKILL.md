@@ -10,12 +10,13 @@ description: Electron docs workflow for desktop app architecture, main/renderer/
 Start from official Electron docs before making architecture or API choices. Electron changes security defaults, platform support, and release guidance over time, so prefer live documentation over memory for anything nontrivial.
 
 1. Identify the task lane: architecture, security, native integration, packaging/release, testing/debugging, or migration from web app.
-2. Read the matching section in [references/electron-doc-map.md](references/electron-doc-map.md).
-3. Open the linked official docs that apply to the task before writing code or advice.
-4. Design the app around strict process boundaries: main owns lifecycle/native privileged work, renderer owns UI, preload exposes small typed APIs, and IPC channels are narrow and validated.
-5. Treat security as part of the first design pass, not a cleanup step.
-6. For release work, verify packaging, signing, notarization, update, and platform requirements before choosing tooling or CI steps.
-7. Completion: architecture, code, or advice is grounded in the relevant official docs, with security and process-boundary implications accounted for.
+2. Inspect the installed Electron version. For upgrades or version-sensitive work, read the official release notes and breaking changes for the installed and target majors.
+3. Read the matching section in [references/electron-doc-map.md](references/electron-doc-map.md).
+4. Open the linked official docs that apply to the task before writing code or advice.
+5. Design the app around strict process boundaries: main owns lifecycle/native privileged work, renderer owns UI, preload exposes small typed APIs, and IPC channels are narrow and validated.
+6. Treat security as part of the first design pass, not a cleanup step.
+7. For release work, verify packaging, signing, notarization, update, and platform requirements before choosing tooling or CI steps.
+8. Completion: architecture, code, or advice is grounded in the relevant official docs, with security and process-boundary implications accounted for.
 
 ## Default Electron Architecture
 
@@ -25,7 +26,7 @@ Prefer this baseline unless the project already has a stronger pattern:
 - Renderer process: render UI only; do not enable direct Node or Electron access for routine UI code.
 - Preload script: bridge a minimal, explicit API into the renderer with `contextBridge`.
 - IPC: expose named methods such as `settings.load()` or `files.pickProject()`, not raw `ipcRenderer`, generic command dispatch, or broad filesystem APIs.
-- Content loading: load local bundled assets or a controlled development URL; guard navigation and popup creation in production.
+- Content loading: serve bundled assets through a constrained custom protocol or use a controlled development URL; guard navigation and popup creation in production.
 - Persistence: choose storage deliberately. Use renderer storage only for low-risk UI state; route privileged or sensitive persistence through main/preload APIs.
 
 ## Security Defaults
@@ -46,7 +47,7 @@ Before shipping or adding risky integrations:
 When converting an existing Vite/React/TanStack app:
 
 - Keep the UI build as a renderer bundle and add Electron entry points rather than mixing Electron imports into shared UI components.
-- Use Vite dev server only in development; load built local files in production.
+- Use Vite dev server only in development; serve bundled production assets through a constrained custom protocol instead of `file://`.
 - Make API/backend assumptions explicit. Decide whether the desktop app talks to a hosted service, embeds a local service, or moves capabilities into main-process handlers.
 - Replace browser-only auth or callback flows with desktop-safe deep-link, external-browser, or device-code flows as appropriate.
 - Check filesystem, notification, menu, tray, and protocol needs against native integration docs before implementing.

@@ -5,6 +5,8 @@ Use these official Electron docs as the primary lookup map. Prefer opening the l
 ## Start Here
 
 - https://www.electronjs.org/docs/latest/ - Docs index and overview. Use for the current sidebar structure and top-level recommendations.
+- https://www.electronjs.org/docs/latest/breaking-changes - Breaking changes by major. Read the installed and target sections before upgrades or version-sensitive changes.
+- https://releases.electronjs.org/ - Stable, beta, and nightly releases with release notes.
 - https://www.electronjs.org/docs/latest/tutorial/tutorial-first-app - Minimal working app, `app.whenReady()`, `BrowserWindow`, local HTML loading, macOS activate behavior, and shutdown basics.
 - https://www.electronjs.org/docs/latest/tutorial/process-model - Main process, renderer processes, preload scripts, and why process boundaries matter.
 
