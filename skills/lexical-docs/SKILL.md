@@ -40,7 +40,7 @@ When the question names a symbol (function/class/command/hook/plugin), use this 
 3. Fetch that module page and verify the exact signature/behavior from the API listing.
 4. If the symbol isn’t in that module, fetch the next-closest module from the sitemap (1-2 tries).
 
-Secondary source (only if docs are thin): consult official examples in `facebook/lexical`:
+Secondary source (only if docs are thin): consult official examples in [`meta/lexical`](https://github.com/meta/lexical):
 
 - `examples/react-rich/src/App.tsx`
 - `packages/lexical-playground/src/Editor.tsx`
@@ -93,6 +93,11 @@ For Lexical 0.52 and later:
 - `SELECTION_CHANGE_COMMAND` runs before DOM reconciliation inside the pending update. Use `$getPreviousSelection()` for the last committed selection, and move DOM-dependent work to `$onUpdate(() => editor.read('latest', ...))`.
 - Default HTML export honors `DOMRenderExtension` `$createDOM` overrides. Review nodes whose overrides should affect only the live editor.
 - `LexicalNode.getCommonAncestor` is removed. Use `$getCommonAncestor(a, b)?.commonAncestor ?? null`, accounting for its different handling of non-element nodes.
+
+For Lexical 0.53 and later:
+
+- Read the package's `node_modules/lexical/CHANGELOG.md` and the [0.53 release notes](https://github.com/meta/lexical/releases/tag/v0.53.0) before upgrading. Extensions deprecated in 0.52 were removed; use the listed replacements.
+- Node lookup and traversal helpers no longer accept unchecked type arguments such as `$getNodeByKey<T>()` or `getParent<T>()`. Remove the type argument and narrow with the matching node guard.
 
 ## Output rules
 

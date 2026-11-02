@@ -16,6 +16,8 @@ Use Effect's official skills for these exact tasks before this general docs work
 
 For stable v4, prefer `effect@4` over stale `@rc` examples, and use the import paths shipped in the installed package. Stable v4 paths omit the beta `unstable` segment, but paths do not declare API stability: `@stability unstable` APIs may change in minor releases, while `@stability experimental` APIs may change in patch releases. Runtime ecosystem packages align on the same v4 version; `@effect/language-service` keeps its own release line.
 
+For Effect 4.1 and later, read the [4.1 release notes](https://github.com/Effect-TS/effect/releases/tag/effect%404.1.0) before changing crypto code. `effect/Crypto` was replaced by the `effect/crypto/*` services, and runtime `*Services` bundles no longer provide crypto. Use the matching `SecureRandom`, `Digest`, `Aead`, or `Signature` service and provide the runtime's crypto layer explicitly.
+
 After the matching task workflow, use the installed package and the docs workflow below to verify exact APIs and versions. These task skills do not replace this general workflow outside setup and v3-to-v4 migration.
 
 ## 1. Establish local context
