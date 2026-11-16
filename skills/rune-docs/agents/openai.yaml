@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rune Docs"
+  short_description: "Look up Anomaly Rune APIs, components, and examples"
+  default_prompt: "Use $rune-docs to check the official Rune docs for this task."

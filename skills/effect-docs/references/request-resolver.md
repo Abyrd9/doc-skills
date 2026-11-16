@@ -48,4 +48,4 @@ const program = Effect.request(new GetUser({ id: "user-1" }), resolver)
 
 ## Docs
 
-- `https://effect.website/docs/additional-resources/api-reference/`
+- `https://effect.website/docs/v3/api`

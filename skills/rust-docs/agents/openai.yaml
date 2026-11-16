@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rust Docs"
+  short_description: "Look up Rust language, Cargo, and crate documentation"
+  default_prompt: "Use $rust-docs to check the version-matched Rust docs for this task."

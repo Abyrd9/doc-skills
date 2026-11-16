@@ -34,5 +34,5 @@ Use this guide when adapting examples across Effect versions.
 
 ## Docs
 
-- `https://effect.website/docs/additional-resources/api-reference/`
+- `https://effect.website/docs/v3/api`
 - `https://tim-smart.github.io/effect-io-ai/`

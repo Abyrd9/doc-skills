@@ -47,5 +47,5 @@ const program = DatabaseConfig.pipe(
 
 ## Docs
 
-- `https://effect.website/docs/additional-resources/api-reference/`
+- `https://effect.website/docs/v3/api`
 - `https://effect.website/docs/data-types/redacted/`

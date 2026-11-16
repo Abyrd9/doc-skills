@@ -11,9 +11,10 @@ Use first-party skills shipped with the installed package as the default source 
 
 1. Inspect installed `@tanstack/*` packages and run `bunx @tanstack/intent@latest list --json`.
 2. If the installed package ships a matching skill and project policy permits it, load it with `bunx @tanstack/intent@latest load <package>#<skill>` before proposing code.
-3. If no matching package skill exists or an exact API claim remains, choose the matching TanStack CLI JSON command below.
-4. Provide TanStack-native patterns and commands first.
-5. Completion: guidance is grounded in the installed package skill and any needed CLI JSON output, or the answer states why neither could be loaded and keeps the recommendation provisional.
+3. For app scaffolding, adding add-ons, choosing integrations, querying docs or metadata, or maintaining custom add-ons and templates, load the matching first-party skill shipped in the active `@tanstack/cli` package before using the command table below. When no project exists yet, read the same skill from the official TanStack CLI repository at the CLI version being used.
+4. If no matching package skill exists or an exact API claim remains, choose the matching TanStack CLI JSON command below.
+5. Provide TanStack-native patterns and commands first.
+6. Completion: guidance is grounded in the matching first-party skill and any needed CLI JSON output, or the answer states why neither could be loaded and keeps the recommendation provisional.
 
 ## Detect TanStack context
 
@@ -29,6 +30,8 @@ Treat these as triggers:
 - Prefer package-local skills because they version with the installed library.
 - Use `bunx @tanstack/intent@latest list --json` for discovery and `bunx @tanstack/intent@latest load <package>#<skill>` for the selected skill.
 
+- [`@tanstack/cli` task skills](https://github.com/TanStack/cli/tree/main/packages/cli/skills) cover creating apps, adding add-ons, choosing integrations, querying docs and metadata, and maintaining custom add-ons or templates. Load only the task that matches; keep this general workflow for library API questions.
+
 - Do not add or rely on MCP client config that runs `@tanstack/cli mcp`; the TanStack CLI MCP server has been removed.
 - Use `bunx @tanstack/cli ... --json` commands to list libraries, search docs, fetch docs pages, inspect add-ons, and query ecosystem metadata.
 - Use add-on discovery commands when users ask for project setup or starter options.
@@ -42,7 +45,7 @@ Treat these as triggers:
 | Inspect an add-on | `bunx @tanstack/cli create --addon-details <add-on> --framework React --json` |
 | Create an app | `bunx @tanstack/cli create <app-name> --framework React --add-ons <add-ons>` |
 | List libraries | `bunx @tanstack/cli libraries --json` |
-| Fetch docs page | `bunx @tanstack/cli doc <library> <path> --json` |
+| Fetch docs page | `bunx @tanstack/cli doc <library> <path> --docs-version <version> --json` when a published archive matches the installed version; omit `--docs-version` for latest |
 | Search docs | `bunx @tanstack/cli search-docs "<query>" --library <library> --framework react --json` |
 | Query ecosystem | `bunx @tanstack/cli ecosystem --category <category> --json` |
 

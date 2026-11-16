@@ -22,6 +22,7 @@ npx skills add Abyrd9/doc-skills --skill react-docs
 - **`capacitor-docs`** — Covers Capacitor configuration, native projects, plugins, migrations, debugging, and releases.
 - **`electron-docs`** — Covers Electron architecture, secure IPC, packaging, signing, updates, and distribution.
 - **`react-native-docs`** — Uses version-matched React Native documentation for core APIs, styles, accessibility, testing, and upgrades.
+- **`rust-docs`** — Routes language, standard library, Cargo, compiler, unsafe-code, and crate questions to version-matched official Rust docs.
 
 ## Library and Framework Skills
 
@@ -30,6 +31,7 @@ npx skills add Abyrd9/doc-skills --skill react-docs
 - **`lexical-docs`** — Covers Lexical editors, React bindings, commands, nodes, transforms, selection, and serialization.
 - **`lucia-docs`** — Uses Lucia's current session guide and Auth Book, with official archives for old Lucia versions.
 - **`react-docs`** — Looks up current React guidance for components, Hooks, state, Effects, Suspense, Server Components, and the React Compiler.
+- **`rune-docs`** — Uses revision-matched docs and examples for Anomaly's pre-release Rune UI framework.
 - **`tanstack-docs`** — Looks up current documentation across the TanStack ecosystem and its command-line tools.
 
 ## First-party replacements
@@ -39,3 +41,4 @@ npx skills add Abyrd9/doc-skills --skill react-docs
 - Effect setup and v3-to-v4 migrations use [Effect's official skills](https://github.com/Effect-TS/skills); general API work remains in `effect-docs`.
 - XState work should use [Stately's official `xstate-v5` skill](https://github.com/statelyai/skills/tree/main/skills/xstate-v5).
 - LangChain and LangGraph work should use [LangChain's official skills and live documentation plugins](https://github.com/langchain-ai/langchain-plugins).
+- Pierre code-rendering work should use the official [`diffs`](https://github.com/pierrecomputer/pierre/tree/main/skills/diffs) and [`highlights`](https://github.com/pierrecomputer/pierre/tree/main/skills/highlights) skills.

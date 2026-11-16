@@ -10,7 +10,7 @@ description: Electron docs workflow for desktop app architecture, main/renderer/
 Start from official Electron docs before making architecture or API choices. Electron changes security defaults, platform support, and release guidance over time, so prefer live documentation over memory for anything nontrivial.
 
 1. Identify the task lane: architecture, security, native integration, packaging/release, testing/debugging, or migration from web app.
-2. Inspect the installed Electron version. For upgrades or version-sensitive work, read the official release notes and breaking changes for the installed and target majors.
+2. Inspect the installed Electron version. For upgrades or version-sensitive work, read the official release notes and breaking changes for the installed and target majors. Check exact API behavior in the matching `electron/electron` release tag instead of applying the website's latest docs to an older release.
 3. Read the matching section in [references/electron-doc-map.md](references/electron-doc-map.md).
 4. Open the linked official docs that apply to the task before writing code or advice.
 5. Design the app around strict process boundaries: main owns lifecycle/native privileged work, renderer owns UI, preload exposes small typed APIs, and IPC channels are narrow and validated.

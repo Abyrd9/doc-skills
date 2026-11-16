@@ -1,6 +1,6 @@
 ---
 name: bun-docs
-description: Bun docs lookup for Bun runtime, package manager, test, formatter, and API work. Use Bun's official LLM index plus route `.md` pages before giving Bun-specific guidance; use MCP only when it is exposed and healthy.
+description: Bun docs lookup for Bun runtime, package manager, test, type checking, formatter, and API work. Use Bun's official LLM index plus route `.md` pages before giving Bun-specific guidance; use MCP only when it is exposed and healthy.
 ---
 
 # Bun Docs
@@ -10,13 +10,14 @@ Use Bun official docs as the first source of truth for Bun tasks.
 ## Workflow
 
 1. Inspect the project's pinned Bun version or run `bun --version` when available.
-2. Detect the Bun surface area: runtime API, package manager, test runner, formatter, scripts, config, Node compatibility, or project setup.
+2. Detect the Bun surface area: runtime API, package manager, test runner, type checking, formatter, scripts, config, Node compatibility, or project setup.
 3. Fetch `https://bun.com/llms.txt`.
 4. Resolve the smallest set of matching `https://bun.com/docs/...` routes.
 5. Fetch the matching `<route>.md` pages, such as `https://bun.com/docs/pm/bunx.md`; if a `.md` route fails, try one nearby route from the index before falling back.
-6. If the official index lacks a command present in the installed release, read that version's official Bun release notes before treating it as undocumented.
-7. Answer from those pages first; fall back to general JavaScript or Node guidance only when Bun docs do not cover the topic.
-8. Completion: the answer or code change is grounded in the fetched Bun route or release note, or it explicitly says Bun docs did not cover the needed detail.
+6. If the index omits a command present in the installed release, check the same-topic official HTML page or site navigation first. For example, `https://bun.com/docs/runtime/check` and `https://bun.com/docs/format` are live but absent from the index.
+7. Read that version's official Bun release notes when the live docs do not establish when the command shipped.
+8. Answer from those pages first; fall back to general JavaScript or Node guidance only when Bun docs do not cover the topic.
+9. Completion: the answer or code change is grounded in a fetched Bun route or release note, or it explicitly says Bun docs did not cover the needed detail.
 
 ## Detect Bun context
 

@@ -1,10 +1,11 @@
 # Capacitor Docs Route Map
 
-Use this map after the version gate in `SKILL.md`. Replace `/docs` with `/docs/vN` when the project is pinned to major `N`.
+Use this map after the version gate in `SKILL.md`. Select the major from the live docs switcher: the current stable major uses `/docs`, older majors use `/docs/vN`, and the unreleased major uses `/docs/next`. Do not assume `/docs/vN` exists for the stable major.
 
 ## Version and Discovery
 
-- Current docs root: `https://capacitorjs.com/docs`
+- Current stable docs root: `https://capacitorjs.com/docs`
+- Unreleased docs root: `https://capacitorjs.com/docs/next`
 - Versioned docs: `https://capacitorjs.com/docs/v7`, `https://capacitorjs.com/docs/v6`, and older majors exposed by the docs version switcher.
 - Package source of truth: installed `@capacitor/core` major in `package.json` or lockfile.
 - If a versioned page warns that it is no longer actively maintained, use it only for a project pinned to that major.
@@ -75,7 +76,7 @@ For official plugins, match plugin install tags to the Capacitor core major. The
 ## Migration and Upgrades
 
 - Cordova/PhoneGap overview: `/cordova`
-- Cordova migration strategy: `/cordova/migrating-strategy`
+- Cordova migration strategy: `/cordova/migration-strategy`
 - Cordova to Capacitor migration: `/cordova/migrating-from-cordova-to-capacitor`
 - Major upgrade guide: `/updating/<major>-0`, for example `/updating/8-0`
 - Capacitor 8.4 to 8.5 UIScene migration: `/updating/8-5`

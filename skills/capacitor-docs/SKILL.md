@@ -22,8 +22,8 @@ Use the matching first-party skill for its workflow, then verify changing APIs a
 
 1. Version gate the task.
    - Inspect the project for `@capacitor/core`, `@capacitor/ios`, `@capacitor/android`, official `@capacitor/*` plugins, `capacitor.config.*`, and `ios/` or `android/` native folders.
-   - Use the docs major that matches `@capacitor/core` when it is installed.
-   - Use the current unversioned docs only when the project is not pinned or the task is planning a new install.
+   - Use the docs switcher entry that matches `@capacitor/core` when it is installed. The current stable major uses the unversioned `/docs` route; older majors use `/docs/vN`, and the unreleased major uses `/docs/next`.
+   - Use the current stable docs when the project is not pinned or the task is planning a new stable install.
    - Completion criterion: the chosen docs base is either the installed Capacitor major or the live current version.
 
 2. Route to the smallest official docs set.
